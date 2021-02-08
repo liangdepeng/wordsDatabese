@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="ArcRectFView">
+        <attr name="arc_rect_view_color" format="color" />
+        <attr name="arc_rect_view_rect_weight" format="integer" />
+        <attr name="arc_rect_view_arc_weight" format="integer" />
+    </declare-styleable>
+
+
+</resources>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".KotlinActivity">
+
+    <TextView
+        android:id="@+id/text_01_tv"
+        style="@style/default_text_style"
+        android:layout_marginTop="30dp"
+        android:text="text_01"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_02_tv"
+        style="@style/default_text_style"
+        android:layout_marginTop="10dp"
+        android:text="text_02"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_01_tv" />
+
+    <TextView
+        android:id="@+id/text_03_tv"
+        style="@style/default_text_style"
+        android:layout_marginTop="10dp"
+        android:text="text_02"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_02_tv" />
+
+    <TextView
+        android:id="@+id/text_04_tv"
+        style="@style/default_text_style"
+        android:layout_marginTop="10dp"
+        android:text="text_02"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_03_tv" />
+
+    <TextView
+        android:id="@+id/text_05_tv"
+        style="@style/default_text_style"
+        android:layout_marginTop="10dp"
+        android:text="text_02"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_04_tv" />
+
+    <Button
+        android:id="@+id/button_01_btn"
+        style="@style/default_text_style"
+        android:layout_marginTop="10dp"
+        android:text="button_01"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_05_tv" />
+
+    <Button
+        android:id="@+id/button_02_btn"
+        style="@style/default_text_style"
+        android:layout_marginTop="10dp"
+        android:text="button_02"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_01_btn" />
+
+    <Button
+        android:id="@+id/button_03_btn"
+        style="@style/default_text_style"
+        android:layout_marginTop="10dp"
+        android:text="button_02"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_02_btn" />
+
+    <Button
+        android:id="@+id/button_04_btn"
+        style="@style/default_text_style"
+        android:layout_marginTop="10dp"
+        android:text="button_02"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_03_btn" />
+
+    <Button
+        android:id="@+id/button_05_btn"
+        style="@style/default_text_style"
+        android:layout_marginTop="10dp"
+        android:text="button_02"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_04_btn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
