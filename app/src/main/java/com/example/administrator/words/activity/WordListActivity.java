@@ -73,7 +73,6 @@ public class WordListActivity extends BaseActivity {
                     }
                 });
                 listView.setAdapter(wordListAdapter);
-
             }
 
             @Override

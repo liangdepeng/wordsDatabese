@@ -19,4 +19,5 @@ public class AppConstants {
 
     public static final String BAI_DUI_TRANSLATE_API_URL = "https://fanyi-api.baidu.com/api/trans/vip/translate";
 
+    public static final String WORD_ITEM_DETAIL_DATA="word_item_detail_data";
 }

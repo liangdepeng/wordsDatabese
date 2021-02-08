@@ -4,10 +4,12 @@ import android.content.Context;
 import android.content.Intent;
 
 import com.dpdp.base_moudle.utils.AppConstants;
+import com.example.administrator.words.Word;
 import com.example.administrator.words.activity.CollectListActivity;
 import com.example.administrator.words.activity.ExplainActivity;
 import com.example.administrator.words.activity.MainActivity;
 import com.example.administrator.words.activity.TranslateActivity;
+import com.example.administrator.words.activity.WordDetailsActivity;
 import com.example.administrator.words.activity.WordListActivity;
 
 /**
@@ -60,7 +62,7 @@ public class JumpPageHelper {
     }
 
     /**
-     * 跳转 收藏列表
+     * 跳转 解释说明
      *
      * @param context
      */
@@ -70,12 +72,23 @@ public class JumpPageHelper {
     }
 
     /**
-     * 跳转 收藏列表
+     * 跳转 翻译
      *
      * @param context
      */
     public static void jumpTranslateActivity(Context context) {
         Intent intent = new Intent(context, TranslateActivity.class);
+        context.startActivity(intent);
+    }
+
+    /**
+     * 跳转 翻译
+     *
+     * @param context
+     */
+    public static void jumpWordDetailsActivity(Context context, Word word) {
+        Intent intent = new Intent(context, WordDetailsActivity.class);
+        intent.putExtra(AppConstants.WORD_ITEM_DETAIL_DATA, word);
         context.startActivity(intent);
     }
 

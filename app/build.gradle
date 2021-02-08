@@ -44,6 +44,9 @@ android {
         }
     }
 
+//    //统一资源前缀，规范资源引用,监测提示命名
+//    resourcePrefix "word_app_"
+
 }
 
 dependencies {

@@ -15,6 +15,7 @@ import com.dpdp.base_moudle.utils.ToastUtil;
 import com.example.administrator.words.R;
 import com.example.administrator.words.Word;
 import com.example.administrator.words.database.WordDataBaseDao;
+import com.example.administrator.words.helper.JumpPageHelper;
 import com.lxj.xpopup.interfaces.OnConfirmListener;
 
 import java.util.ArrayList;
@@ -48,8 +49,8 @@ public class CollectListActivity extends BaseActivity {
     }
 
     private void initData() {
-      //  showCustomLoadingDialog();
-        AsyncTaskUtil.startTask(new AsyncTaskUtil.AsyncSimpleListener<ArrayList<Word>>(){
+        //  showCustomLoadingDialog();
+        AsyncTaskUtil.startTask(new AsyncTaskUtil.AsyncSimpleListener<ArrayList<Word>>() {
             @Override
             public void onPreExecute() {
                 showCustomLoadingDialog();
@@ -64,7 +65,7 @@ public class CollectListActivity extends BaseActivity {
 
             @Override
             public ArrayList<Word> doWork() {
-                return  WordDataBaseDao.getInstance().queryAllWords(new WordDataBaseDao.ICheckWords() {
+                return WordDataBaseDao.getInstance().queryAllWords(new WordDataBaseDao.ICheckWords() {
                     @Override
                     public boolean checkWordIsNeed(Word word) {
                         if (word != null) {
@@ -74,7 +75,7 @@ public class CollectListActivity extends BaseActivity {
                     }
                 });
             }
-        },"word_list_collect");
+        }, "word_list_collect");
     }
 
     private void initListView() {
@@ -85,6 +86,12 @@ public class CollectListActivity extends BaseActivity {
                 viewHolder.setText(R.id.word_tv, item.word)
                         .setText(R.id.translate_tv, item.translate)
                         .setText(R.id.index_tv, (position + 1) + " .")
+                        .setOnClickListener(R.id.content_cl, new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                JumpPageHelper.jumpWordDetailsActivity(context, item);
+                            }
+                        })
                         .setOnClickListener(R.id.un_like_btn, new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
