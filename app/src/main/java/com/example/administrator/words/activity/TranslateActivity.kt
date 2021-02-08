@@ -14,6 +14,7 @@ import com.dpdp.base_moudle.utils.MD5
 import com.dpdp.base_moudle.utils.StatusBarUtil
 import com.dpdp.base_moudle.utils.ToastUtil
 import com.example.administrator.words.R
+import com.example.administrator.words.helper.TranslateHelper
 import com.lxj.xpopup.XPopup
 import com.lxj.xpopup.interfaces.OnSelectListener
 import kotlinx.android.synthetic.main.activity_trans_lation.*
@@ -26,41 +27,8 @@ class TranslateActivity : BaseActivity(), View.OnClickListener, OnSelectListener
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_trans_lation)
-        languageMap = initData()
+        languageMap = TranslateHelper.getLanguageMap()
         initView()
-    }
-
-    private fun initData(): LinkedHashMap<String, String> {
-        val hashMap = LinkedHashMap<String, String>()
-        hashMap["zh"] = "中文"
-        hashMap["en"] = "英语"
-        hashMap["jp"] = "日语"
-        hashMap["kor"] = "韩语"
-        hashMap["yue"] = "粤语"
-        hashMap["wyw"] = "文言文"
-        hashMap["cht"] = "繁体中文"
-        hashMap["fra"] = "法语"
-        hashMap["spa"] = "西班牙语"
-        hashMap["th"] = "泰语"
-        hashMap["ara"] = "阿拉伯语"
-        hashMap["ru"] = "俄语"
-        hashMap["pt"] = "葡萄牙语"
-        hashMap["de"] = "德语"
-        hashMap["it"] = "意大利语"
-        hashMap["el"] = "希腊语"
-        hashMap["nl"] = "荷兰语"
-        hashMap["pl"] = "波兰语"
-        hashMap["bul"] = "保加利亚语"
-        hashMap["est"] = "爱沙尼亚语"
-        hashMap["dan"] = "丹麦语"
-        hashMap["fin"] = "芬兰语"
-        hashMap["cs"] = "捷克语"
-        hashMap["rom"] = "罗拉尼亚语"
-        hashMap["slo"] = "斯洛文尼亚语"
-        hashMap["swe"] = "瑞典语"
-        hashMap["hu"] = "匈牙利语"
-        hashMap["vie"] = "越南语"
-        return hashMap
     }
 
     private fun initView() {
