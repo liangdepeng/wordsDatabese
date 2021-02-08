@@ -6,8 +6,8 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.app.ActivityOptionsCompat
-import com.bumptech.glide.Glide
 import com.dpdp.base_moudle.base.BaseActivity
+import com.dpdp.base_moudle.image.GlideUtils
 import com.example.administrator.words.R
 import kotlinx.android.synthetic.main.activity_big_image_layout.*
 
@@ -24,6 +24,7 @@ class BigImageActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_big_image_layout)
-        Glide.with(this).load(R.mipmap.ui_default_logo).into(big_image_iv)
+       // Glide.with(this).load(R.mipmap.ui_default_logo).into(big_image_iv)
+        GlideUtils.load(this,R.mipmap.ui_default_logo,big_image_iv)
     }
 }

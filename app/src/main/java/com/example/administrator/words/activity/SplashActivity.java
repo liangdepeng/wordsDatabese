@@ -2,7 +2,6 @@ package com.example.administrator.words.activity;
 
 import android.animation.Animator;
 import android.animation.ValueAnimator;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.AccelerateInterpolator;
@@ -11,10 +10,11 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
 import com.dpdp.base_moudle.base.BaseActivity;
 import com.dpdp.base_moudle.base.CustomAnimatorListener;
+import com.dpdp.base_moudle.image.GlideUtils;
 import com.example.administrator.words.R;
+import com.example.administrator.words.helper.JumpPageHelper;
 
 /**
  * 欢迎 界面
@@ -46,19 +46,17 @@ public class SplashActivity extends BaseActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SplashActivity.this, MainActivity.class);
-                Bundle bundle = new Bundle();
-                bundle.putString("name", editText.getText().toString());
-                intent.putExtras(bundle);
-                startActivity(intent);
+                JumpPageHelper.jumpMainActivity(SplashActivity.this,1);
                 SplashActivity.this.finish();
             }
         });
 
         // 滑稽 gif
-        Glide.with(this).load(R.drawable.ui_loading).into(loadingIv);
+        //Glide.with(this).load(R.drawable.ui_loading).into(loadingIv);
+        GlideUtils.load(this,R.drawable.ui_loading,loadingIv);
         // 欢迎 gif
-        Glide.with(this).load(R.drawable.welcome).into(welcomeIv);
+       // Glide.with(this).load(R.drawable.welcome).into(welcomeIv);
+        GlideUtils.load(this,R.drawable.welcome,welcomeIv);
 
         splashWelcomeAnimator();
 

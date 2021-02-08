@@ -9,12 +9,12 @@ import androidx.annotation.Nullable;
 import com.dpdp.base_moudle.base.BaseActivity;
 import com.dpdp.base_moudle.base.BaseViewHolder;
 import com.dpdp.base_moudle.base.ListViewBaseAdapter;
+import com.dpdp.base_moudle.dialog.XPopupUtil;
+import com.dpdp.base_moudle.utils.AsyncTaskUtil;
+import com.dpdp.base_moudle.utils.ToastUtil;
 import com.example.administrator.words.R;
 import com.example.administrator.words.Word;
 import com.example.administrator.words.database.WordDataBaseDao;
-import com.dpdp.base_moudle.utils.AsyncTaskUtil;
-import com.dpdp.base_moudle.utils.ToastUtil;
-import com.dpdp.base_moudle.dialog.XPopupUtil;
 import com.lxj.xpopup.interfaces.OnConfirmListener;
 
 import java.util.ArrayList;
@@ -24,7 +24,7 @@ import java.util.ArrayList;
  * <p>
  * Date: 2021-01-16
  * <p>
- * Summary:
+ * Summary: 收藏列表
  */
 public class CollectListActivity extends BaseActivity {
 

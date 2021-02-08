@@ -18,12 +18,9 @@ import com.dpdp.base_moudle.utils.ToastUtil;
 import com.example.administrator.words.MyWordsReceiver;
 import com.example.administrator.words.R;
 import com.example.administrator.words.activity.BigImageActivity;
-import com.example.administrator.words.activity.CollectListActivity;
-import com.example.administrator.words.activity.ExplainActivity;
 import com.example.administrator.words.activity.MainActivity;
-import com.example.administrator.words.activity.TranslateActivity;
-import com.example.administrator.words.activity.WordListActivity;
 import com.example.administrator.words.database.WordDataBaseDao;
+import com.example.administrator.words.helper.JumpPageHelper;
 import com.lxj.xpopup.interfaces.OnConfirmListener;
 
 
@@ -53,6 +50,7 @@ public class SelfFragment extends BaseFragment {
         userLogoIv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //  startActivity(new Intent(mActivity, TestBindActivity.class));
                 BigImageActivity.Companion.startActivity((MainActivity) mActivity, userLogoIv, getString(R.string.image_translation));
             }
         });
@@ -72,28 +70,26 @@ public class SelfFragment extends BaseFragment {
         textViewWordDataBase.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(mContext, WordListActivity.class);
-                startActivity(intent);
+                JumpPageHelper.jumpWordListActivity(mContext);
             }
         });
         collectWords.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(mContext, CollectListActivity.class));
+                JumpPageHelper.jumpCollectListActivity(mContext);
             }
         });
         translateWords.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(mContext, TranslateActivity.class));
+                JumpPageHelper.jumpTranslateActivity(mContext);
             }
         });
         //点击软件说明
         textViewExplain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(mContext, ExplainActivity.class);
-                startActivity(intent);
+                JumpPageHelper.jumpExplainActivity(mContext);
 
 //                String infoText = getString(R.string.text_part_1) + "\n" +
 //                        getString(R.string.text_part_2) + "\n" +
