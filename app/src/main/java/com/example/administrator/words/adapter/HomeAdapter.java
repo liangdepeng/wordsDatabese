@@ -15,9 +15,7 @@ import com.example.administrator.words.R;
  * <p>
  * Date: 2021-02-06
  * <p>
- * Summary:
- * <p>
- * api path:
+ * Summary: 主页
  */
 public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
@@ -36,7 +34,7 @@ public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         } else if (viewType == 1) {
             return new TypeTwoViewHolder(LayoutInflater.from(context).inflate(R.layout.item_type_two_layout, parent, false));
         } else {
-            return new ListViewHolder(LayoutInflater.from(context).inflate(R.layout.item_type_list_layout, parent, false));
+            return new NormalViewHolder(LayoutInflater.from(context).inflate(R.layout.item_type_list_layout, parent, false));
         }
 
     }
@@ -47,10 +45,11 @@ public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
         } else if (holder instanceof TypeTwoViewHolder) {
 
-        } else if (holder instanceof ListViewHolder) {
+        } else if (holder instanceof NormalViewHolder) {
 
         } else {
             // default
+
         }
 
     }
@@ -77,8 +76,8 @@ public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         }
     }
 
-    public static class ListViewHolder extends RecyclerView.ViewHolder {
-        public ListViewHolder(@NonNull View itemView) {
+    public static class NormalViewHolder extends RecyclerView.ViewHolder {
+        public NormalViewHolder(@NonNull View itemView) {
             super(itemView);
         }
     }

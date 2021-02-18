@@ -14,7 +14,9 @@ import kotlinx.android.synthetic.main.activity_big_image_layout.*
 class BigImageActivity : AppCompatActivity() {
 
     companion object {
+        private var translationName=""
         fun startActivity(activity: BaseActivity, view: View, translationName: String): Unit {
+            this.translationName=translationName
             val intent = Intent(activity, BigImageActivity::class.java)
             val makeSceneTransitionAnimation = ActivityOptionsCompat.makeSceneTransitionAnimation(activity, view, translationName)
             ActivityCompat.startActivity(activity, intent, makeSceneTransitionAnimation.toBundle())
@@ -24,7 +26,10 @@ class BigImageActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_big_image_layout)
-       // Glide.with(this).load(R.mipmap.ui_default_logo).into(big_image_iv)
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
+            big_image_iv.transitionName = translationName
+        }
+        // Glide.with(this).load(R.mipmap.ui_default_logo).into(big_image_iv)
         GlideUtils.load(this,R.mipmap.ui_default_logo,big_image_iv)
     }
 }

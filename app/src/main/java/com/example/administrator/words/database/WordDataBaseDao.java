@@ -17,9 +17,7 @@ import java.util.ArrayList;
  * <p>
  * Date: 2021-01-19
  * <p>
- * Summary:
- * <p>
- * api path:
+ * Summary: 数据库帮助类
  */
 public class WordDataBaseDao {
 

@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.StaggeredGridLayoutManager;
  * <p>
  * Date: 2021-02-08
  * <p>
- * Summary:
+ * Summary: https://www.cnblogs.com/whycxb/p/9329660.html
  */
 public class WrapRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
