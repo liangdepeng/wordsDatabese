@@ -199,8 +199,6 @@ public class HttpHelper {
         private void dealWithResponseInfo(String response) {
             try {
 
-                Log.e("httpUrl", "response: \n"+JsonFormatUtil.formatDataFromJson(response));
-
                 if (callback.get() == null) {
                     ToastUtil.showMsg("callback is null");
                     return;
@@ -222,6 +220,8 @@ public class HttpHelper {
                 e.printStackTrace();
                 ToastUtil.showMsg(e.getMessage());
                // callback.get().onError(e.getMessage(),requestParams.getRequestTag());
+            }finally {
+                Log.e("httpUrl", "response: \n"+JsonFormatUtil.formatDataFromJson(response));
             }
 
         }

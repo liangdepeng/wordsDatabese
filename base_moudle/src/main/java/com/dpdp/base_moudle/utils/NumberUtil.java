@@ -8,17 +8,20 @@ import java.math.BigDecimal;
  * Date: 2021-01-10
  * <p>
  * Summary: 比较大小
- * <p>
- * api path:
  */
 public class NumberUtil {
 
-
     /**
-     * 比较2个数的大小 需要转换成 String
+     * 比较任意2个数的大小 需要转换成 String
      *
-     * @return {@code 1} if {@code a > b}, {@code -1} if {@code a < b},
+     * @return
+     *
+     * {@code 1} if {@code a > b},
+     *
+     * {@code -1} if {@code a < b},
+     *
      * {@code 0} if {@code this == val}.
+     *
      */
     public static int compareTo(String a, String b) {
         BigDecimal aBigDecimal = new BigDecimal(a);
@@ -48,6 +51,12 @@ public class NumberUtil {
         return compareTo(String.valueOf(a), String.valueOf(b));
     }
 
+    public static int compareIntFloat(int a, float b) {
+        return compareTo(String.valueOf(a), String.valueOf(b));
+    }
 
+    public static int compareIntDouble(int a, double b) {
+        return compareTo(String.valueOf(a), String.valueOf(b));
+    }
 
 }

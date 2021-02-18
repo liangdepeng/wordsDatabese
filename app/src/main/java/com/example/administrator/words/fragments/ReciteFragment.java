@@ -1,6 +1,5 @@
 package com.example.administrator.words.fragments;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
@@ -16,13 +15,13 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import com.dpdp.base_moudle.base.BaseFragment;
-import com.dpdp.base_moudle.base.SingleCallback;
+import com.dpdp.base_moudle.dialog.XPopupUtil;
+import com.dpdp.base_moudle.interfaces.SingleCallback;
+import com.dpdp.base_moudle.store.AppConstants;
+import com.dpdp.base_moudle.store.SpUtils;
 import com.dpdp.base_moudle.utils.ArrayUtils;
 import com.dpdp.base_moudle.utils.AsyncTaskUtil;
-import com.dpdp.base_moudle.utils.AppConstants;
-import com.dpdp.base_moudle.store.SpUtils;
 import com.dpdp.base_moudle.utils.ToastUtil;
-import com.dpdp.base_moudle.dialog.XPopupUtil;
 import com.example.administrator.words.MyWordsReceiver;
 import com.example.administrator.words.R;
 import com.example.administrator.words.Word;

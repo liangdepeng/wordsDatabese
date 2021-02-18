@@ -9,9 +9,9 @@ import com.dpdp.base_moudle.http.HttpHelper
 import com.dpdp.base_moudle.http.HttpRequestMethod
 import com.dpdp.base_moudle.http.HttpRequestParams
 import com.dpdp.base_moudle.http.bean.TranslateBean
-import com.dpdp.base_moudle.utils.AppConstants
+import com.dpdp.base_moudle.store.AppConstants
+import com.dpdp.base_moudle.utils.DeviceUtil
 import com.dpdp.base_moudle.utils.MD5
-import com.dpdp.base_moudle.utils.StatusBarUtil
 import com.dpdp.base_moudle.utils.ToastUtil
 import com.example.administrator.words.R
 import com.example.administrator.words.helper.TranslateHelper
@@ -94,7 +94,7 @@ class TranslateActivity : BaseActivity(), View.OnClickListener, OnSelectListener
                         return
                     }
                     for (itemText in transResult) {
-                        result.append(itemText.dst).append("\n")
+                        result.append(itemText.dst.trim()).append("\n")
                     }
 
                     result_txt_tv?.text = result.toString()
@@ -124,7 +124,7 @@ class TranslateActivity : BaseActivity(), View.OnClickListener, OnSelectListener
         }
 
         XPopup.Builder(this)
-                .maxHeight(StatusBarUtil.dip2px(600f).toInt())
+                .maxHeight(DeviceUtil.dp2px(600f))
                 .asCenterList("请选择要翻译的目标语言", array, this)
                 .setCheckedPosition(1)
                 .show()

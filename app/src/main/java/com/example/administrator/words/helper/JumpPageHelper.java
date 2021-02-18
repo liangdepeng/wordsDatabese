@@ -3,7 +3,7 @@ package com.example.administrator.words.helper;
 import android.content.Context;
 import android.content.Intent;
 
-import com.dpdp.base_moudle.utils.AppConstants;
+import com.dpdp.base_moudle.store.AppConstants;
 import com.example.administrator.words.Word;
 import com.example.administrator.words.activity.CollectListActivity;
 import com.example.administrator.words.activity.ExplainActivity;

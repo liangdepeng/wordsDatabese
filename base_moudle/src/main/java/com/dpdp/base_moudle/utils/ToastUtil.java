@@ -2,7 +2,14 @@ package com.dpdp.base_moudle.utils;
 
 import android.content.Context;
 import android.view.Gravity;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.Nullable;
+
+import com.dpdp.base_moudle.R;
 
 
 /**
@@ -11,7 +18,12 @@ import android.widget.Toast;
 
 public class ToastUtil {
 
-    private static Context appContext;
+    static Context appContext;
+    static long firstClickTime = 0;
+    static final long SHORT_DURATION_TIMEOUT = 4000;
+    static final long LONG_DURATION_TIMEOUT = 7000;
+    static Toast customToast;
+    static TextView tipsTv;
 
     public static void init(Context appCtx) {
         appContext = appCtx;
@@ -22,14 +34,49 @@ public class ToastUtil {
     }
 
     @Deprecated
-    public static void showMsg(Context context, CharSequence msg) { //显示信息的方法，传参：界面信息，要显示的信息
-        try {
-            Toast toast = Toast.makeText(appContext, msg, Toast.LENGTH_SHORT);
-            toast.setGravity(Gravity.CENTER, 0, 0);
-            toast.show();
-        } catch (Exception e) {
-            e.printStackTrace();
+    public static void showMsg(@Nullable Context context, CharSequence msg) { //显示信息的方法，传参：界面信息，要显示的信息
+
+        // 检测防止重复点击 以短的toast 显示时间上限为最短的界限
+        long currentClickTime = System.currentTimeMillis();
+        if (currentClickTime - firstClickTime <= SHORT_DURATION_TIMEOUT) {
+            firstClickTime = currentClickTime;
+            return;
         }
 
+        // 检测是否是主线程 UI线程 不是要到主线程更新UI
+        ThreadUtils.runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    if (customToast == null) {
+                        // 自定义 通用 toast
+                        customToast = new Toast(appContext);
+                        View v = layoutInflaterFrom(appContext).inflate(R.layout.base_toast_tip_layout, null);
+                        tipsTv = v.findViewById(R.id.tip_tv);
+                        customToast.setView(v);
+                        customToast.setGravity(Gravity.CENTER, 0, 0);
+                        customToast.setDuration(Toast.LENGTH_SHORT);
+                    }
+                    tipsTv.setText(msg);
+                    customToast.show();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+    }
+
+    /**
+     * Android source
+     *
+     * Obtains the LayoutInflater from the given context.
+     */
+    static LayoutInflater layoutInflaterFrom(Context context) {
+        LayoutInflater LayoutInflater =
+                (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        if (LayoutInflater == null) {
+            throw new AssertionError("LayoutInflater not found.");
+        }
+        return LayoutInflater;
     }
 }

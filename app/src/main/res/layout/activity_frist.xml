@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_above="@+id/radio_group"
-        android:background="@color/color_f3f3f3"/>
+        android:background="@color/color_f3f3f3" />
 
     <RadioGroup
         android:id="@+id/radio_group"
@@ -25,6 +25,17 @@
         android:background="@color/color_white"
         android:elevation="5dp"
         android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radio_btn_home"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="主页"
+            android:textColor="@drawable/ui_tab_check_text_color" />
+
 
         <RadioButton
             android:id="@+id/radio_btn_input"

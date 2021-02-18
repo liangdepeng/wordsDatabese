@@ -7,7 +7,7 @@ import android.view.LayoutInflater;
 import androidx.annotation.Nullable;
 
 import com.dpdp.base_moudle.base.BaseActivity;
-import com.dpdp.base_moudle.utils.AppConstants;
+import com.dpdp.base_moudle.store.AppConstants;
 import com.example.administrator.words.Word;
 import com.example.administrator.words.databinding.ActivityWordDetailsLayoutBinding;
 

@@ -8,7 +8,7 @@ import androidx.core.content.ContextCompat;
 
 import com.dpdp.base_moudle.base.BaseViewHolder;
 import com.dpdp.base_moudle.base.ListViewBaseAdapter;
-import com.dpdp.base_moudle.base.SingleCallback;
+import com.dpdp.base_moudle.interfaces.SingleCallback;
 import com.example.administrator.words.R;
 import com.example.administrator.words.Word;
 import com.example.administrator.words.helper.JumpPageHelper;
@@ -20,9 +20,7 @@ import java.util.List;
  * <p>
  * Date: 2021-01-09
  * <p>
- * Summary:
- * <p>
- * api path:
+ * Summary: 单词列表适配器
  */
 public class WordListAdapter extends ListViewBaseAdapter<Word> {
 

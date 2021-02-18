@@ -13,7 +13,7 @@
 //import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 //
 //import com.dpdp.base_moudle.base.BaseActivity;
-//import com.dpdp.base_moudle.base.SingleCallback;
+//import com.dpdp.base_moudle.interfaces.SingleCallback;
 //import com.dpdp.base_moudle.utils.Constants;
 //import com.dpdp.base_moudle.store.SpUtils;
 //import com.dpdp.base_moudle.utils.ToastUtil;

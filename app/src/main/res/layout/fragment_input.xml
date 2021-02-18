@@ -8,45 +8,52 @@
     <include layout="@layout/title_layout" />
 
     <LinearLayout
+        android:id="@+id/input_ll"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="40dp"
+        android:orientation="vertical"
         android:layout_marginTop="100dp"
-        android:layout_marginRight="40dp"
-        android:gravity="center_vertical"
-        android:orientation="horizontal">
-
-        <TextView
-            style="@style/default_text_18sp_style"
-            android:text="输入单词：" />
-
-        <EditText
-            android:id="@+id/input_et_words"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:hint="请输入单词"
-            android:singleLine="true" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
-        android:gravity="center_vertical"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content">
 
-        <TextView
-            style="@style/default_text_18sp_style"
-            android:text="输入翻译：" />
-
-        <EditText
-            android:id="@+id/input_et_translate"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:hint="请输入翻译"
-            android:singleLine="true" />
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/default_text_18sp_style"
+                android:text="输入单词：" />
+
+            <EditText
+                android:id="@+id/input_et_words"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="请输入单词"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/default_text_18sp_style"
+                android:text="输入翻译：" />
+
+            <EditText
+                android:id="@+id/input_et_translate"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="请输入翻译"
+                android:singleLine="true" />
+        </LinearLayout>
+
     </LinearLayout>
+
 
     <Button
         android:id="@+id/input_btn"

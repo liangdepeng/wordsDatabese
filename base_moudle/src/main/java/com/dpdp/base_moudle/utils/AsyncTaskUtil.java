@@ -121,8 +121,7 @@ public class AsyncTaskUtil {
          */
         @Override
         protected T doInBackground(Object... objects) {
-            Object[] objects1 = objects;
-            tag = objects1[0];
+            tag = objects[0];
             return listener.get().doWork();
         }
     }

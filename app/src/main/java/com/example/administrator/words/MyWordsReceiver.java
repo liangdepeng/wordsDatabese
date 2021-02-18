@@ -4,14 +4,14 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 
-import com.dpdp.base_moudle.base.SingleCallback;
+import com.dpdp.base_moudle.interfaces.SingleCallback;
 
 /**
  * Created by ldp.
  * <p>
  * Date: 2021-01-24
  * <p>
- * Summary: 本地广播 高效的实现 基本的通信通知功能
+ * Summary: 本地广播 高效的实现 app主进程内部基本的通信通知功能
  */
 public class MyWordsReceiver extends BroadcastReceiver {
 

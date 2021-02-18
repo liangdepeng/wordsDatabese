@@ -11,8 +11,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.dpdp.base_moudle.base.BaseActivity;
-import com.dpdp.base_moudle.base.CustomAnimatorListener;
 import com.dpdp.base_moudle.image.GlideUtils;
+import com.dpdp.base_moudle.interfaces.CustomAnimatorListener;
 import com.example.administrator.words.R;
 import com.example.administrator.words.helper.JumpPageHelper;
 
@@ -20,6 +20,7 @@ import com.example.administrator.words.helper.JumpPageHelper;
  * 欢迎 界面
  */
 public class SplashActivity extends BaseActivity {
+
     private TextView button;
     private EditText editText;
     private ImageView loadingIv;
@@ -66,7 +67,7 @@ public class SplashActivity extends BaseActivity {
      * 渐变动画
      */
     private void splashWelcomeAnimator() {
-        final ValueAnimator valueAnimator = ValueAnimator.ofFloat(1f, 0f).setDuration(1000);
+        final ValueAnimator valueAnimator = ValueAnimator.ofFloat(1f, 0f).setDuration(800);
         valueAnimator.setInterpolator(new AccelerateInterpolator());
         valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
@@ -86,6 +87,6 @@ public class SplashActivity extends BaseActivity {
             public void run() {
                 valueAnimator.start();
             }
-        }, 500);
+        }, 200);
     }
 }

@@ -5,17 +5,20 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.example.administrator.words.R;
 import com.dpdp.base_moudle.base.BaseFragment;
-import com.example.administrator.words.database.WordDataBaseDao;
-import com.dpdp.base_moudle.utils.ToastUtil;
 import com.dpdp.base_moudle.dialog.XPopupUtil;
+import com.dpdp.base_moudle.utils.StringUtils;
+import com.dpdp.base_moudle.utils.ToastUtil;
+import com.example.administrator.words.R;
+import com.example.administrator.words.database.WordDataBaseDao;
 import com.lxj.xpopup.interfaces.OnConfirmListener;
 
 
@@ -25,6 +28,7 @@ import com.lxj.xpopup.interfaces.OnConfirmListener;
 public class InputFragment extends BaseFragment {
 
     private EditText editTextWord, editTextTranslate;
+    private View inputLl;
 
     @Override
     protected String getResetTag() {
@@ -39,7 +43,7 @@ public class InputFragment extends BaseFragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_input, container,false);
+        return inflater.inflate(R.layout.fragment_input, container, false);
     }
 
     @Override
@@ -53,6 +57,7 @@ public class InputFragment extends BaseFragment {
 
         editTextWord = view.findViewById(R.id.input_et_words);
         editTextTranslate = view.findViewById(R.id.input_et_translate);
+        inputLl = view.findViewById(R.id.input_ll);
         Button button = view.findViewById(R.id.input_btn);
 
 //        View titleBar = view.findViewById(R.id.title_bar);
@@ -74,6 +79,14 @@ public class InputFragment extends BaseFragment {
 
         final String word = editTextWord.getText().toString();
         String translate = editTextTranslate.getText().toString();
+
+        if (StringUtils.contentIsNullOrEmpty(word, translate)) {
+            Animation animation = AnimationUtils.loadAnimation(mContext, R.anim.anmi_shake);
+            inputLl.startAnimation(animation);
+            ToastUtil.showMsg("输入内容不能为空！");
+            return;
+        }
+
         if (word.endsWith("ion")) {
             translate = "n. " + editTextTranslate.getText().toString();
         } else if (word.endsWith("ness")) {

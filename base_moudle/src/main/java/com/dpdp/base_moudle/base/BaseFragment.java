@@ -14,6 +14,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.dpdp.base_moudle.R;
+import com.dpdp.base_moudle.interfaces.IBaseView;
 
 
 /**

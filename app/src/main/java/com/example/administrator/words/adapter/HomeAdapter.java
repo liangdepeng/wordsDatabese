@@ -15,7 +15,7 @@ import com.example.administrator.words.R;
  * <p>
  * Date: 2021-02-06
  * <p>
- * Summary: 主页
+ * Summary: 主页 适配器 todo 内容待设计 添加
  */
 public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 

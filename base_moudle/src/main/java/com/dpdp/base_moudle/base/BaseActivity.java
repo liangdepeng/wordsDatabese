@@ -11,6 +11,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.dpdp.base_moudle.R;
+import com.dpdp.base_moudle.interfaces.IBaseView;
 import com.dpdp.base_moudle.utils.LogUtils;
 import com.lxj.xpopup.XPopup;
 import com.lxj.xpopup.impl.LoadingPopupView;

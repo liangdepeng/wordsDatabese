@@ -1,4 +1,4 @@
-package com.dpdp.base_moudle.utils;
+package com.dpdp.base_moudle.store;
 
 /**
  * Created by ldp.

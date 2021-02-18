@@ -10,9 +10,9 @@ import android.util.Log;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import com.dpdp.base_moudle.base.BaseActivity;
-import com.dpdp.base_moudle.base.SingleCallback;
+import com.dpdp.base_moudle.interfaces.SingleCallback;
+import com.dpdp.base_moudle.store.AppConstants;
 import com.dpdp.base_moudle.store.SpUtils;
-import com.dpdp.base_moudle.utils.AppConstants;
 import com.dpdp.base_moudle.utils.ToastUtil;
 import com.example.administrator.words.MyWordsReceiver;
 import com.example.administrator.words.R;
@@ -84,7 +84,7 @@ public class MainActivity extends BaseActivity implements SingleCallback<Intent>
 
     private void initTabBar() {
         tabFragmentManager = new TabFragmentManager(this, R.id.first_fl);
-        tabFragmentManager.switchTab(1);
+        tabFragmentManager.switchTab(2);
     }
 
 

@@ -19,8 +19,6 @@ import com.example.administrator.words.databinding.FragmentHomeBinding;
  * Date: 2021-02-06
  * <p>
  * Summary: todo HOME 主页面
- * <p>
- * api path:
  */
 public class HomeFragment extends BaseFragment {
 
