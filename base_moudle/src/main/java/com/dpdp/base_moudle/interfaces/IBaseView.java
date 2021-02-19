@@ -8,7 +8,7 @@ package com.dpdp.base_moudle.interfaces;
  * Summary:
  * <p>
  */
-interface IBaseView {
+public interface IBaseView {
 
     /**
      * 显示加载框

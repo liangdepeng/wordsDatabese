@@ -1,6 +1,7 @@
 package com.dpdp.base_moudle.utils;
 
 import android.content.Context;
+import android.os.SystemClock;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -37,8 +38,8 @@ public class ToastUtil {
     public static void showMsg(@Nullable Context context, CharSequence msg) { //显示信息的方法，传参：界面信息，要显示的信息
 
         // 检测防止重复点击 以短的toast 显示时间上限为最短的界限
-        long currentClickTime = System.currentTimeMillis();
-        if (currentClickTime - firstClickTime <= SHORT_DURATION_TIMEOUT) {
+        long currentClickTime = SystemClock.elapsedRealtime();
+        if (currentClickTime - firstClickTime <= SHORT_DURATION_TIMEOUT/2) {
             firstClickTime = currentClickTime;
             return;
         }

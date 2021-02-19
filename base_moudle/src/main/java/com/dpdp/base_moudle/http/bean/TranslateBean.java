@@ -7,9 +7,9 @@ import java.util.List;
  * <p>
  * Date: 2021-01-31
  * <p>
- * Summary:
+ * Summary: 翻译结果数据结构
  * <p>
- * api path:
+ * api path: "https://fanyi-api.baidu.com/api/trans/vip/translate"
  */
 public class TranslateBean {
 

@@ -1,6 +1,8 @@
 package com.example.administrator.words.activity
 
 import android.os.Bundle
+import android.text.BidiFormatter
+import android.text.TextDirectionHeuristics
 import android.text.TextUtils
 import android.view.View
 import com.dpdp.base_moudle.base.BaseActivity
@@ -96,8 +98,8 @@ class TranslateActivity : BaseActivity(), View.OnClickListener, OnSelectListener
                     for (itemText in transResult) {
                         result.append(itemText.dst.trim()).append("\n")
                     }
-
-                    result_txt_tv?.text = result.toString()
+                    //因为有些语言是 RTL 显示的 从右到左 这边转换一下 变为 我们中国人的 LTR 从左到右显示
+                    result_txt_tv?.text = BidiFormatter.getInstance().unicodeWrap(result.toString(),TextDirectionHeuristics.LTR)
                 }
             }
 
