@@ -13,121 +13,134 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="80dp"
-        android:transitionName="@string/image_translation"
         android:src="@mipmap/ui_default_logo"
+        android:transitionName="@string/image_translation"
         tools:targetApi="lollipop" />
-
-    <TextView
-        android:id="@+id/self_tv_words"
-        android:layout_width="match_parent"
-        android:layout_height="44dp"
-        android:layout_marginTop="60dp"
-        android:background="@color/color_white"
-        android:gravity="center_vertical"
-        android:paddingLeft="12dp"
-        android:text="单词库"
-        android:textSize="14sp" />
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#f3f3f3" />
-
-    <TextView
-        android:id="@+id/collect_words"
-        android:layout_width="match_parent"
-        android:layout_height="44dp"
-        android:background="@color/color_white"
-        android:gravity="center_vertical"
-        android:paddingLeft="12dp"
-        android:text="我的收藏"
-        android:textSize="14sp" />
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#f3f3f3" />
-
-    <TextView
-        android:id="@+id/trans_words"
-        android:layout_width="match_parent"
-        android:layout_height="44dp"
-        android:background="@color/color_white"
-        android:gravity="center_vertical"
-        android:paddingLeft="12dp"
-        android:text="趣味翻译"
-        android:textSize="14sp" />
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#f3f3f3" />
-
-    <TextView
-        android:id="@+id/self_tv_explain"
-        android:layout_width="match_parent"
-        android:layout_height="44dp"
-        android:background="@color/color_white"
-        android:gravity="center_vertical"
-        android:paddingLeft="12dp"
-        android:text="软件说明"
-        android:textSize="14sp" />
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#f3f3f3" />
-
-    <TextView
-        android:id="@+id/reset_words"
-        android:layout_width="match_parent"
-        android:layout_height="44dp"
-        android:background="@color/color_white"
-        android:gravity="center_vertical"
-        android:paddingLeft="12dp"
-        android:text="重置单词库"
-        android:textSize="14sp" />
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#f3f3f3" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
         android:background="@color/color_white"
-        android:orientation="horizontal"
-        android:weightSum="10">
+        android:orientation="vertical">
 
         <TextView
-            android:id="@+id/version_tv"
-            android:layout_width="0dp"
+            android:id="@+id/self_tv_words"
+            android:layout_width="match_parent"
             android:layout_height="44dp"
-            android:layout_weight="5"
+            android:background="?attr/selectableItemBackground"
             android:gravity="center_vertical"
             android:paddingLeft="12dp"
-            android:text="软件版本"
+            android:text="单词库"
             android:textSize="14sp" />
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f3f3f3" />
+
         <TextView
-            style="@style/default_text_style"
-            android:layout_gravity="center_vertical"
-            android:layout_weight="5"
-            android:gravity="end"
-            android:paddingRight="12dp"
-            android:text="v 0.0.2" />
+            android:id="@+id/collect_words"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:paddingLeft="12dp"
+            android:text="我的收藏"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f3f3f3" />
+
+        <TextView
+            android:id="@+id/trans_words"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:paddingLeft="12dp"
+            android:text="趣味翻译"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f3f3f3" />
+
+        <TextView
+            android:id="@+id/self_tv_explain"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:paddingLeft="12dp"
+            android:text="软件说明"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f3f3f3" />
+
+        <TextView
+            android:id="@+id/reset_words"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:paddingLeft="12dp"
+            android:text="重置单词库"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f3f3f3" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="?attr/selectableItemBackground"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <TextView
+                android:id="@+id/version_tv"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="5"
+                android:gravity="center_vertical"
+                android:paddingLeft="12dp"
+                android:text="软件版本"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/version_num_tv"
+                style="@style/default_text_style"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="5"
+                android:gravity="end"
+                android:paddingRight="12dp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:background="#f3f3f3" />
+
+        <TextView
+            android:id="@+id/delete_words"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:paddingLeft="12dp"
+            android:text="删除全部单词"
+            android:textSize="14sp" />
+
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/delete_words"
-        android:layout_width="match_parent"
-        android:layout_height="44dp"
-        android:layout_marginTop="20dp"
-        android:background="@color/color_white"
-        android:gravity="center_vertical"
-        android:paddingLeft="12dp"
-        android:text="删除全部单词"
-        android:textSize="14sp" />
 
 </LinearLayout>

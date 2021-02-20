@@ -14,6 +14,7 @@ import com.dpdp.base_moudle.base.ui.BaseFragment;
 import com.dpdp.base_moudle.dialog.XPopupUtil;
 import com.dpdp.base_moudle.store.AppConstants;
 import com.dpdp.base_moudle.store.SpUtils;
+import com.dpdp.base_moudle.utils.DeviceUtil;
 import com.dpdp.base_moudle.utils.ToastUtil;
 import com.example.administrator.words.MyWordsReceiver;
 import com.example.administrator.words.R;
@@ -53,6 +54,14 @@ public class SelfFragment extends BaseFragment {
                 //  startActivity(new Intent(mActivity, KotlinActivity.class));
                 BigImageActivity.Companion.startActivity((MainActivity) mActivity,
                         userLogoIv, getString(R.string.image_translation));
+            }
+        });
+        TextView versionTv = (TextView) view.findViewById(R.id.version_num_tv);
+        versionTv.setText(String.format("v_%s", DeviceUtil.getVersionName(mContext)));
+        versionTv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ToastUtil.showMsg("最新版本 v_" + DeviceUtil.getVersionName(mContext));
             }
         });
         // 单词库
