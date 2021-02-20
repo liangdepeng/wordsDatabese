@@ -37,9 +37,9 @@ public class ToastUtil {
     @Deprecated
     public static void showMsg(@Nullable Context context, CharSequence msg) { //显示信息的方法，传参：界面信息，要显示的信息
 
-        // 检测防止重复点击 以短的toast 显示时间上限为最短的界限
+        // 检测防止重复点击
         long currentClickTime = SystemClock.elapsedRealtime();
-        if (currentClickTime - firstClickTime <= SHORT_DURATION_TIMEOUT/2) {
+        if (currentClickTime - firstClickTime <= 500) {
             firstClickTime = currentClickTime;
             return;
         }
@@ -69,7 +69,7 @@ public class ToastUtil {
 
     /**
      * Android source
-     *
+     * <p>
      * Obtains the LayoutInflater from the given context.
      */
     static LayoutInflater layoutInflaterFrom(Context context) {

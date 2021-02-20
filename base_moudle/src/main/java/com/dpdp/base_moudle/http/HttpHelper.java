@@ -26,6 +26,8 @@ import java.util.regex.Pattern;
  * Date: 2021-01-30
  * <p>
  * Summary: 安卓原生异步网络请求封装 单例设计模式 异步任务实现 异步请求
+ *
+ *          HttpURLConnection  + AsyncTask + Gson 解析实现
  */
 public class HttpHelper {
 

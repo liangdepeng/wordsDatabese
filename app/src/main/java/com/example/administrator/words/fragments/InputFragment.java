@@ -110,7 +110,7 @@ public class InputFragment extends BaseFragment {
         } else {
             translate = editTextTranslate.getText().toString();
         }
-        if (word.isEmpty() || editTextTranslate.getText().toString().isEmpty()) {
+        if (StringUtils.contentIsNullOrEmpty(word, editTextTranslate.getText().toString())) {
             ToastUtil.showMsg("单词或翻译不能为空");
         } else {
             final String finalTranslate = translate;

@@ -95,7 +95,7 @@ public class WordDataBaseDao {
         boolean checkWordIsNeed(Word word);
     }
 
-    public ArrayList<Word> queryAllWords(@Nullable ICheckWords checkWords) {
+    public ArrayList<Word> queryAllWords(@Nullable ICheckWords iCheckWords) {
         ArrayList<Word> arrayList = new ArrayList<>();
         try {
             SQLiteDatabase database = wordDBOpenHelper.getWritableDatabase();
@@ -115,8 +115,8 @@ public class WordDataBaseDao {
                 word1.isCollect = "1".equals(isCollect);
                 word1.isComplete = "1".equals(isComplete);
 
-                if (checkWords != null) {
-                    if (checkWords.checkWordIsNeed(word1)) {
+                if (iCheckWords != null) {
+                    if (iCheckWords.checkWordIsNeed(word1)) {
                         arrayList.add(word1);
                     }
                 } else {
