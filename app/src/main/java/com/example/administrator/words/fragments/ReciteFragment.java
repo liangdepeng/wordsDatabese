@@ -14,7 +14,7 @@ import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
-import com.dpdp.base_moudle.base.BaseFragment;
+import com.dpdp.base_moudle.base.ui.BaseFragment;
 import com.dpdp.base_moudle.dialog.XPopupUtil;
 import com.dpdp.base_moudle.interfaces.SingleCallback;
 import com.dpdp.base_moudle.store.AppConstants;

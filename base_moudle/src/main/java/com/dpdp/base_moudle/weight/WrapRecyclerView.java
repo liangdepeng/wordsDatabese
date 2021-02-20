@@ -12,8 +12,9 @@ import androidx.recyclerview.widget.RecyclerView;
  * <p>
  * Date: 2021-02-08
  * <p>
- * Summary:
+ * Summary: TODO
  */
+@Deprecated
 public class WrapRecyclerView extends RecyclerView {
 
     public WrapRecyclerView(@NonNull Context context) {

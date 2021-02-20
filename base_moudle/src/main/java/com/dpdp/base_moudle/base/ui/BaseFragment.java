@@ -1,4 +1,4 @@
-package com.dpdp.base_moudle.base;
+package com.dpdp.base_moudle.base.ui;
 
 import android.app.Activity;
 import android.content.Context;

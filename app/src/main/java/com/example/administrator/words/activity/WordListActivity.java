@@ -3,7 +3,7 @@ package com.example.administrator.words.activity;
 import android.os.Bundle;
 import android.widget.ListView;
 
-import com.dpdp.base_moudle.base.BaseActivity;
+import com.dpdp.base_moudle.base.ui.BaseActivity;
 import com.dpdp.base_moudle.dialog.XPopupUtil;
 import com.dpdp.base_moudle.interfaces.SingleCallback;
 import com.dpdp.base_moudle.utils.AsyncTaskUtil;

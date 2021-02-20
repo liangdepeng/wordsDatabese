@@ -9,7 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.GridLayoutManager;
 
-import com.dpdp.base_moudle.base.BaseFragment;
+import com.dpdp.base_moudle.base.ui.BaseFragment;
 import com.example.administrator.words.adapter.HomeAdapter;
 import com.example.administrator.words.databinding.FragmentHomeBinding;
 

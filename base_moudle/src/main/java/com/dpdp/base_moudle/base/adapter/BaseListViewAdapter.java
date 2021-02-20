@@ -1,4 +1,4 @@
-package com.dpdp.base_moudle.base;
+package com.dpdp.base_moudle.base.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -17,12 +17,12 @@ import java.util.List;
  * <p>
  * api path:
  */
-public abstract class ListViewBaseAdapter<T> extends BaseAdapter {
+public abstract class BaseListViewAdapter<T> extends BaseAdapter {
 
     protected Context context;
     protected List<T> list;
 
-    public ListViewBaseAdapter(Context context, List<T> list) {
+    public BaseListViewAdapter(Context context, List<T> list) {
         this.context = context;
         this.list = list;
     }

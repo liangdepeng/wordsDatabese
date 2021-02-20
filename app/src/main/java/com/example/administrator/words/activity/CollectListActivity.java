@@ -6,9 +6,9 @@ import android.widget.ListView;
 
 import androidx.annotation.Nullable;
 
-import com.dpdp.base_moudle.base.BaseActivity;
-import com.dpdp.base_moudle.base.BaseViewHolder;
-import com.dpdp.base_moudle.base.ListViewBaseAdapter;
+import com.dpdp.base_moudle.base.adapter.BaseListViewAdapter;
+import com.dpdp.base_moudle.base.adapter.BaseViewHolder;
+import com.dpdp.base_moudle.base.ui.BaseActivity;
 import com.dpdp.base_moudle.dialog.XPopupUtil;
 import com.dpdp.base_moudle.utils.AsyncTaskUtil;
 import com.dpdp.base_moudle.utils.ToastUtil;
@@ -31,7 +31,7 @@ public class CollectListActivity extends BaseActivity {
 
     private ListView collectListView;
     private ArrayList<Word> allWords;
-    private ListViewBaseAdapter<Word> adapter;
+    private BaseListViewAdapter<Word> adapter;
 
     @Override
     protected String getRetTag() {
@@ -79,7 +79,7 @@ public class CollectListActivity extends BaseActivity {
     }
 
     private void initListView() {
-        adapter = new ListViewBaseAdapter<Word>(this, allWords) {
+        adapter = new BaseListViewAdapter<Word>(this, allWords) {
 
             @Override
             protected void onBindItemData(BaseViewHolder viewHolder, int position, final Word item) {

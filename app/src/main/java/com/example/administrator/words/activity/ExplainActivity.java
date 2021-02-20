@@ -1,7 +1,8 @@
 package com.example.administrator.words.activity;
 
 import android.os.Bundle;
-import com.dpdp.base_moudle.base.BaseActivity;
+
+import com.dpdp.base_moudle.base.ui.BaseActivity;
 import com.example.administrator.words.R;
 
 /**

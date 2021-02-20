@@ -13,7 +13,7 @@ import android.widget.EditText;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.dpdp.base_moudle.base.BaseFragment;
+import com.dpdp.base_moudle.base.ui.BaseFragment;
 import com.dpdp.base_moudle.dialog.XPopupUtil;
 import com.dpdp.base_moudle.utils.StringUtils;
 import com.dpdp.base_moudle.utils.ToastUtil;

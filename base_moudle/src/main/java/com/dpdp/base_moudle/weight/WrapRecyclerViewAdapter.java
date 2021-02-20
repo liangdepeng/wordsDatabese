@@ -13,8 +13,9 @@ import androidx.recyclerview.widget.StaggeredGridLayoutManager;
  * <p>
  * Date: 2021-02-08
  * <p>
- * Summary: https://www.cnblogs.com/whycxb/p/9329660.html
+ * Summary: https://www.cnblogs.com/whycxb/p/9329660.html  todo
  */
+@Deprecated
 public class WrapRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     private static final int ITEM_TYPE_FOOT = 200;

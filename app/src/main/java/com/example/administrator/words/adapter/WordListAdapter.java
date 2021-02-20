@@ -6,8 +6,8 @@ import android.view.View;
 
 import androidx.core.content.ContextCompat;
 
-import com.dpdp.base_moudle.base.BaseViewHolder;
-import com.dpdp.base_moudle.base.ListViewBaseAdapter;
+import com.dpdp.base_moudle.base.adapter.BaseListViewAdapter;
+import com.dpdp.base_moudle.base.adapter.BaseViewHolder;
 import com.dpdp.base_moudle.interfaces.SingleCallback;
 import com.example.administrator.words.R;
 import com.example.administrator.words.Word;
@@ -22,7 +22,7 @@ import java.util.List;
  * <p>
  * Summary: 单词列表适配器
  */
-public class WordListAdapter extends ListViewBaseAdapter<Word> {
+public class WordListAdapter extends BaseListViewAdapter<Word> {
 
     private SingleCallback<Word> singleCallback;
 

@@ -5,7 +5,7 @@ import android.view.LayoutInflater;
 
 import androidx.annotation.Nullable;
 
-import com.dpdp.base_moudle.base.BaseActivity;
+import com.dpdp.base_moudle.base.ui.BaseActivity;
 import com.example.administrator.words.R;
 import com.example.administrator.words.databinding.ActivityRegisterUserBinding;
 

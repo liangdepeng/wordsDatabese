@@ -10,7 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
-import com.dpdp.base_moudle.base.BaseFragment;
+import com.dpdp.base_moudle.base.ui.BaseFragment;
 import com.dpdp.base_moudle.dialog.XPopupUtil;
 import com.dpdp.base_moudle.store.AppConstants;
 import com.dpdp.base_moudle.store.SpUtils;

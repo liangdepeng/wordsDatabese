@@ -10,7 +10,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.dpdp.base_moudle.base.BaseActivity;
+import com.dpdp.base_moudle.base.ui.BaseActivity;
 import com.dpdp.base_moudle.image.GlideUtils;
 import com.dpdp.base_moudle.interfaces.CustomAnimatorListener;
 import com.example.administrator.words.R;

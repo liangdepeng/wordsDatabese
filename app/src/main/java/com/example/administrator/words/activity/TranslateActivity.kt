@@ -5,7 +5,7 @@ import android.text.BidiFormatter
 import android.text.TextDirectionHeuristics
 import android.text.TextUtils
 import android.view.View
-import com.dpdp.base_moudle.base.BaseActivity
+import com.dpdp.base_moudle.base.ui.BaseActivity
 import com.dpdp.base_moudle.http.HttpCallback
 import com.dpdp.base_moudle.http.HttpHelper
 import com.dpdp.base_moudle.http.HttpRequestMethod

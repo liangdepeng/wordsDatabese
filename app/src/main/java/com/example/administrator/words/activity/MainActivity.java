@@ -9,7 +9,7 @@ import android.util.Log;
 
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
-import com.dpdp.base_moudle.base.BaseActivity;
+import com.dpdp.base_moudle.base.ui.BaseActivity;
 import com.dpdp.base_moudle.interfaces.SingleCallback;
 import com.dpdp.base_moudle.store.AppConstants;
 import com.dpdp.base_moudle.store.SpUtils;

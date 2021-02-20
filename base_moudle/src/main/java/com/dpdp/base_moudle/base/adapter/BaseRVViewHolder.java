@@ -1,4 +1,4 @@
-package com.dpdp.base_moudle.base;
+package com.dpdp.base_moudle.base.adapter;
 
 import android.content.Context;
 import android.util.SparseArray;
@@ -9,6 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.ColorInt;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
@@ -25,12 +26,13 @@ import com.dpdp.base_moudle.utils.NumberUtil;
  * Summary: ViewHolder 缓存view 链式调用
  * <p>
  */
-public class BaseViewHolder {
+public class BaseRVViewHolder extends RecyclerView.ViewHolder {
 
     private final View rootView;
     private final SparseArray<View> views;
 
-    public BaseViewHolder(View rootView) {
+    public BaseRVViewHolder(View rootView) {
+        super(rootView);
         this.rootView = rootView;
         views = new SparseArray<>();
     }
@@ -44,14 +46,14 @@ public class BaseViewHolder {
         return (T) view;
     }
 
-    public BaseViewHolder setText(int viewId, CharSequence text) {
+    public BaseRVViewHolder setText(int viewId, CharSequence text) {
         TextView view = getView(viewId);
         if (view != null)
             view.setText(text);
         return this;
     }
 
-    public BaseViewHolder setTextColor(int viewId, @ColorInt int color) {
+    public BaseRVViewHolder setTextColor(int viewId, @ColorInt int color) {
         TextView view = getView(viewId);
         if (view != null) {
             view.setTextColor(color);
@@ -59,7 +61,7 @@ public class BaseViewHolder {
         return this;
     }
 
-    public BaseViewHolder setOnClickListener(int viewId, View.OnClickListener listener) {
+    public BaseRVViewHolder setOnClickListener(int viewId, View.OnClickListener listener) {
         View view = getView(viewId);
         if (view != null) {
             view.setOnClickListener(listener);
@@ -67,7 +69,7 @@ public class BaseViewHolder {
         return this;
     }
 
-    public BaseViewHolder setNetImageResource(@NonNull Context context, int viewId, String internetImageUrl, float corner) {
+    public BaseRVViewHolder setNetImageResource(@NonNull Context context, int viewId, String internetImageUrl, float corner) {
         ImageView view = getView(viewId);
         if (view != null) {
             RoundedCorners roundedCorners = new RoundedCorners(DeviceUtil.dp2px(corner));
@@ -83,11 +85,11 @@ public class BaseViewHolder {
         return this;
     }
 
-    public BaseViewHolder setNativeImageResource(int viewId, int resource) {
+    public BaseRVViewHolder setNativeImageResource(int viewId, int resource) {
         return setNativeImageResource(null, viewId, resource, 0f);
     }
 
-    public BaseViewHolder setNativeImageResource(@Nullable Context context, int viewId, int resource, float corner) {
+    public BaseRVViewHolder setNativeImageResource(@Nullable Context context, int viewId, int resource, float corner) {
         ImageView view = getView(viewId);
 
         if (view == null)
