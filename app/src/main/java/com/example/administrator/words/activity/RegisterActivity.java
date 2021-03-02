@@ -14,7 +14,7 @@ import com.example.administrator.words.databinding.ActivityRegisterUserBinding;
  * <p>
  * Date: 2021-02-19
  * <p>
- * Summary:
+ * Summary:注册 功能 activity
  */
 public class RegisterActivity extends BaseActivity {
 

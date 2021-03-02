@@ -18,8 +18,6 @@ import com.dpdp.base_moudle.utils.DeviceUtil;
 import com.dpdp.base_moudle.utils.ToastUtil;
 import com.example.administrator.words.MyWordsReceiver;
 import com.example.administrator.words.R;
-import com.example.administrator.words.activity.BigImageActivity;
-import com.example.administrator.words.activity.MainActivity;
 import com.example.administrator.words.database.WordDataBaseDao;
 import com.example.administrator.words.helper.JumpPageHelper;
 import com.lxj.xpopup.interfaces.OnConfirmListener;
@@ -51,9 +49,9 @@ public class SelfFragment extends BaseFragment {
         userLogoIv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                JumpPageHelper.jumpLoginActivity(mContext);
                 //  startActivity(new Intent(mActivity, KotlinActivity.class));
-                BigImageActivity.Companion.startActivity((MainActivity) mActivity,
-                        userLogoIv, getString(R.string.image_translation));
+               // BigImageActivity.Companion.startActivity((MainActivity) mActivity, userLogoIv, getString(R.string.image_translation));
             }
         });
         TextView versionTv = (TextView) view.findViewById(R.id.version_num_tv);

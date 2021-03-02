@@ -32,8 +32,14 @@ class TranslateActivity : BaseActivity(), View.OnClickListener, OnSelectListener
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_trans_lation)
-        languageMap = TranslateHelper.getLanguageMap()
         initView()
+        initData()
+    }
+
+    private fun initData() {
+        languageMap = TranslateHelper.getLanguageMap()
+        translationType = TranslateHelper.getDefaultLanguageType()
+        translate_tv?.text = TranslateHelper.getDefaultLanguage(translationType)
     }
 
     private fun initView() {
@@ -53,7 +59,7 @@ class TranslateActivity : BaseActivity(), View.OnClickListener, OnSelectListener
                 showSelectLanguageDialog()
             }
             R.id.translate_btn -> {
-              //  requestApiTranslateContent()
+                //  requestApiTranslateContent()
                 requestApiTranslateContentByVolley()
             }
             R.id.clear_input_tv -> {
@@ -87,7 +93,7 @@ class TranslateActivity : BaseActivity(), View.OnClickListener, OnSelectListener
         volleyRequestParams.addParams("salt", num)
         volleyRequestParams.addParams("sign", MD5.md5("20210119000675743$str$num" + "U9TcTM4AtXAqISFKvezO"))
 
-        volleyHttpHelper.startRequest(volleyRequestParams,object:VolleyHttpCallback{
+        volleyHttpHelper.startRequest(volleyRequestParams, object : VolleyHttpCallback {
             override fun onSuccess(response: Any?, requestParams: VolleyRequestParams?) {
                 dismissCustomLoadingDialog()
                 if (response is TranslateBean) {

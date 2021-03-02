@@ -4,6 +4,12 @@
     <color name="colorPrimaryDark">#34AEF6</color>
     <color name="colorAccent">#FF4081</color>
     <color name="colorBlack">#000000</color>
+    <color name="color_80_Black">#33000000</color>
+    <color name="color_20_Black">#cc000000</color>
+    <color name="color_30_Black">#b3000000</color>
+    <color name="color_35_Black">#a6000000</color>
+    <color name="color_40_Black">#99000000</color>
+    <color name="color_45_Black">#8c000000</color>
     <color name="colorYellow">#ffff00</color>
     <color name="colorOrange">#ff6600</color>
     <color name="colorRed">#ff0000</color>

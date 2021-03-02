@@ -7,6 +7,7 @@ import com.dpdp.base_moudle.store.AppConstants;
 import com.example.administrator.words.Word;
 import com.example.administrator.words.activity.CollectListActivity;
 import com.example.administrator.words.activity.ExplainActivity;
+import com.example.administrator.words.activity.LoginActivity;
 import com.example.administrator.words.activity.MainActivity;
 import com.example.administrator.words.activity.TranslateActivity;
 import com.example.administrator.words.activity.WordDetailsActivity;
@@ -89,6 +90,15 @@ public class JumpPageHelper {
     public static void jumpWordDetailsActivity(Context context, Word word) {
         Intent intent = new Intent(context, WordDetailsActivity.class);
         intent.putExtra(AppConstants.WORD_ITEM_DETAIL_DATA, word);
+        context.startActivity(intent);
+    }
+
+    /**
+     * 跳转登录
+     * @param context
+     */
+    public static void jumpLoginActivity(Context context){
+        Intent intent = new Intent(context, LoginActivity.class);
         context.startActivity(intent);
     }
 

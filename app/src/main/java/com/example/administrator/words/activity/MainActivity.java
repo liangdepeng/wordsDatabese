@@ -25,7 +25,7 @@ import java.io.InputStreamReader;
 import java.lang.ref.WeakReference;
 
 /**
- * 主界面 等比缩放
+ * 主界面
  */
 public class MainActivity extends BaseActivity implements SingleCallback<Intent> {
 

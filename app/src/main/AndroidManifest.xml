@@ -32,8 +32,9 @@
         <!--            android:screenOrientation="behind"-->
         <!--            android:theme="@android:style/Theme.Translucent.NoTitleBar" />-->
 
-        <activity android:name=".KotlinActivity"
-            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".KotlinActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".activity.TranslateActivity"
             android:screenOrientation="portrait"
@@ -56,14 +57,26 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".activity.ExplainActivity"
-            android:theme="@style/AppTheme"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".activity.CollectListActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".activity.WordDetailsActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TestGoodActivity"
+            android:screenOrientation="portrait" >
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+        </activity>
     </application>
 
 </manifest>
